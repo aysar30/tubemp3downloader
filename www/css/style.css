@@ -1,0 +1,42 @@
+.bar {height: 56px;}
+.platform-android .bar .title {
+	color: #fff;
+	line-height: 56px;
+}
+.bar.bar-stable {
+    border-color: #b2b2b2;
+    background: #f60000;
+}
+.has-header {
+	top: 60px;
+	margin: 0 10px;
+}
+.spinner-android {
+	stroke: #f60000;
+}
+.spinner svg {
+	margin: 0 auto;
+	display: block;
+}
+.button.button-stable {
+    display: -webkit-box !important;
+    margin: 0 auto;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+ul {
+	list-style: decimal inside;
+}
+.center {text-align:center;}
+.bar .title + .buttons {
+	top: 15px;
+    right: 15px;
+    padding-left: 40px;
+}
+.ion-android-more-vertical {
+	font-size: 25px;
+    color: #fff;
+}
+.modal-backdrop {top: 58px;}

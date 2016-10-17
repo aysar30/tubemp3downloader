@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <!-- css -->
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="js/app.js"></script>
+    <script src="lib/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+  </head>
+  <body ng-app="ymp3d" ng-controller="appCtrl">
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Tube Mp3 Downloader</h1>
+      </ion-header-bar>
+      <ion-content scroll="false" ng-hide="shared">
+      <p class="center">Developed by <a href="http://albertoabruzzo.com" onClick="javascript:return openExternal(this)">Alberto Abruzzo</a>. Thanks to the guys of <a href="http://www.youtubeinmp3.com/api/" onClick="javascript:return openExternal(this)">YouTube MP3 Downloader</a> for their amazing API.</p>
+        <ul>
+          <li><img src="img/01.jpg" /></li>
+          <li><img src="img/02.jpg" /></li>
+        </ul>        
+      </ion-content>
+      <ion-content ng-show="shared">
+        <h4 class="center"><b>{{apiResult.title}}</b></h4>
+        <ion-spinner icon="android" ng-show="downloading"></ion-spinner>
+        <p ng-show="downloading" class="center">Downloading...</p>
+        <p ng-show="downloading" class="center">{{downloadProgress | limitTo:4}}%</p>
+        <p ng-show="errorMessage" class="center">There was an error, retry to download or share again the song</p>
+        <button ng-if="open" class="button button-stable" ng-click="openfile()">
+          Open file
+        </button>
+        <br />
+        <p ng-show="open || errorMessage" class="center">Problems with file?</p>
+        <button ng-if="open || errorMessage" class="button button-stable" ng-click="retry()">Retry download</button>
+      </ion-content>
+    </ion-pane>
+    <script>
+      function openExternal(elem) {
+      window.open(elem.href, "_system");
+      return false;
+      }
+    </script>
+  </body>
+</html>
