@@ -28,8 +28,7 @@
     "cordova-plugin-file-transfer",
     "cordova-plugin-google-analytics",
     "cordova-plugin-headercolor",
-    "cordova-plugin-inappbrowser",
-    "com.napolitano.cordova.plugin.intent"
+    "cordova-plugin-inappbrowser"
   ],
   "cordovaPlatforms": []
 }
