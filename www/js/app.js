@@ -96,7 +96,7 @@ angular.module('ymp3d', ['ionic', 'ngCordova'])
                 $scope.downloadProgress = (progress.loaded / progress.total) * 100;              
               })
             })
-          }, 1000)
+          }, 5000)
         } else {$scope.errorMessage = true;}
       })
     })
