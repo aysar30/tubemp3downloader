@@ -1,10 +1,10 @@
 # Tube Mp3 Downloader
 Just open the YouTube app on Android and share the video to **Tube Mp3 Downloader** and the app will download an .mp3 of the video to the `Music` folder on your phone.
 
-![alt tag](https://github.com/AlbertoAbruzzo/tubemp3downloader/raw/master/how_works.gif)
-
 ### Download the app (.apk)
 If you want only to download the app, you can do it clicking **[here](https://github.com/AlbertoAbruzzo/tubemp3downloader/raw/master/Tube%20Mp3%20Downloader%20v1.0.2.apk)**. You'll download an `.apk` to install.
+
+![alt tag](https://github.com/AlbertoAbruzzo/tubemp3downloader/raw/master/how_works.gif)
 
 ### How to compile the app
 If you want to compile the app you need to clone the repo and then launch 4 commands:
