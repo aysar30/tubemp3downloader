@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.albertoabruzzo.ymp3d" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.albertoabruzzo.ymp3d" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Tube Mp3 Downloader</name>
   <description>
         A simple app for download YouTube videos in mp3 with a few taps.
     </description>
-  <author email="alberto.abruzzo@gmail.com" href="http://albertoabruzzo.com/">
+  <author email="alberto.abruzzo@gmail.com" href="https://albertoabruzzo.com/">
       Alberto Abruzzo
     </author>
   <content src="index.html"/>
@@ -13,6 +13,7 @@
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="19"/>
+  <preference name="android-targetSdkVersion" value="22"/>
   <preference name="BackupWebStorage" value="none"/>
   <preference name="SplashScreen" value="none"/>
   <preference name="orientation" value="portrait"/>

@@ -29,8 +29,8 @@ angular.module('ymp3d', ['ionic', 'ngCordova'])
             initApp();
         }
     }
-    // 'ca-app-pub-2425632328211416/8695930682' banner
-        var admobid = {};
+    
+      var admobid = {};
       if( /(android)/i.test(navigator.userAgent) ) {
           admobid = { // for Android
               banner: 'ca-app-pub-2425632328211416/8695930682'
@@ -67,9 +67,8 @@ angular.module('ymp3d', ['ionic', 'ngCordova'])
 .controller('appCtrl', function($rootScope, $scope, video, $ionicPlatform, $http, $timeout, $cordovaFileTransfer, $cordovaFileOpener2, $ionicPopup) {
   if (typeof window.analytics !== 'undefined'){
     window.analytics.startTrackerWithId('UA-64581793-5');
-      window.analytics.trackView('Top 50 Apps');
-      console.log('ready data works!');
-    } else {}
+      window.analytics.trackView('Main page');
+    }
   $scope.$on('$videoShared', function() {   
     $scope.apiResult = {}; 
     $scope.shared = true;
@@ -84,13 +83,13 @@ angular.module('ymp3d', ['ionic', 'ngCordova'])
           $scope.apiResult = result.data;
           $scope.downloading = true;
           $rootScope.filePath = cordova.file.externalRootDirectory + 'Music/' + result.data.title.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '') + '.mp3';
-          var trustHosts = true;
           $timeout(function(){
-            $cordovaFileTransfer.download($scope.apiResult.link, $rootScope.filePath, trustHosts)
+            $cordovaFileTransfer.download($scope.apiResult.link, $rootScope.filePath, true)
               .then(function(result) {
                 $scope.downloading = false;
                 $scope.open = true;
-              }, function(err) {            
+              }, function(err) {   
+              $scope.downloading = false;       
                 $scope.errorMessage = true;
               }, function (progress) {
               $timeout(function () {
